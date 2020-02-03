@@ -1,0 +1,75 @@
+<html>
+    <head>
+        <script>
+            // var test=document.getElementsByTagName("P");
+            // test[0].innerText="james"
+        
+           
+        
+            var count=1;
+            
+            function xyz(){
+           
+
+    
+           
+            var trone=document.getElementById("trone").innerHTML;
+            var table=document.getElementById("table");
+
+            
+            var row=document.createElement("tr")
+            row.innerHTML=trone
+            table.append(row)
+
+            count++
+
+            var firstcol=row.cells[0]
+            firstcol.innerHTML=count;
+
+
+
+            var editableColum=row.cells[1]
+            editableColum.setAttribute("contentEditable",true)
+            editableColum.style.backgroundColor="RED";
+            editableColum.style.color="yellow";
+           
+        
+           
+            
+            }   
+        
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+        }
+        </style>
+
+
+    </head>
+   
+ <body>
+     <p>haiiii</p>
+ <table id="table" border="1px">
+     <tr>
+         <td >id</td>
+         <td id="name">Name</td>
+         <td id="age">Age</td>
+         <td id="mobile">Mobile Number</td>
+         <td>Action</td>
+     </tr>
+     <tr id="trone">
+        <td id="idtag">1</td>
+        <td  id="name1">Sai </td>
+        <td  id="age1">23</td>
+        <td  id="mobile1">9573017295</td>
+        <td> <button onclick="xyz()">Click</button> </td>
+    </tr>
+    
+ </table>
+
+
+ </body>   
+</html>

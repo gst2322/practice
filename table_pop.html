@@ -1,0 +1,146 @@
+<html>
+    <head>
+        <script>
+         function xyz(){
+
+            var popdiv=document.getElementById("popdiv")
+                popdiv.style.display="block";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="block"
+
+                var name=document.getElementById("name").innerText
+
+                var name1=document.getElementById("name1")
+                name1.setAttribute("value",name)
+                // name1.value=name;
+
+                var age=document.getElementById("age").innerText
+
+                var age1=document.getElementById("age1")
+                age1.setAttribute("value",age)
+
+                var mobile=document.getElementById("mobile").innerText
+
+                var mobile1=document.getElementById("mobile1")
+                mobile1.setAttribute("value",mobile)
+
+                
+
+
+         }
+         function abc(){
+                popdiv.style.display="none";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="none";
+            }  
+          function userdata(){
+            // var popdiv=document.getElementById("popdiv")
+            //     popdiv.style.display="block";
+            //     var overlay=document.getElementById("overlay");
+            //     overlay.style.display="block"
+
+                var name1=document.getElementById("name1").value
+
+                var name=document.getElementById("name")
+                name.innerText=name1
+               
+                // name1.value=name;
+
+                var age1=document.getElementById("age1").value
+
+                var age=document.getElementById("age")
+                age.innerText=age1;
+                
+
+                var mobile1=document.getElementById("mobile1").value
+
+                var mobile=document.getElementById("mobile")
+                mobile.innerText=mobile1;
+              
+
+          } 
+        
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+        }
+        #popdiv{
+                display: none;
+                background-color: aqua;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 25%;
+                
+                width: 350px;
+                position: fixed;
+                z-index: 100;
+                opacity: 1;
+                
+
+            }
+            body{
+                /* background-color: red; */
+            }
+            #overlay{
+                display: none;
+                z-index: 99;
+                background-color: rgba(0,0,0,0.5);
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+
+
+    </head>
+   
+ <body>
+ <table id="table" border="1px">
+     <tr>
+         <td >id</td>
+         <td >Name</td>
+         <td >Age</td>
+         <td >Mobile Number</td>
+         <td>Action</td>
+     </tr>
+     <tr id="trone">
+        <td id="idtag">1</td>
+        <td  id="name">Sai </td>
+        <td  id="age">23</td>
+        <td  id="mobile">9573017295</td>
+        <td> <button onclick="xyz()">Click</button> </td>
+    </tr>
+    
+ </table>
+ <div id="overlay">
+
+</div>
+ <div id="popdiv">
+    <button type="button" onclick="abc()">Close</button><br>
+    <form id="fullform" >
+        
+        Name:<input type="text" id="name1" required><br>
+        Age:<input type="number" id="age1"><br>
+        mobile:<input type="text" id="mobile1"><br>
+
+        <button type="button" onclick="userdata()">Save Your Details</button>
+      
+    </form>
+    
+</div>
+
+
+
+
+
+ </body>   
+</html>

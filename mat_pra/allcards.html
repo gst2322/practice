@@ -1,0 +1,358 @@
+<html>
+    <head>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+          #first {
+            height: 200px;
+            width: 200px;
+            background-color:burlywood;
+            }
+            .my-card-content {
+            padding: 16px;
+            }  
+            .mdc-button__label{
+                font-size: 32px;
+            }
+            #iconbutton{
+                height: 100px;
+                
+            }
+         #all{
+             height: 300px;
+             width: 520px;
+             background-color: coral;
+         }  
+         #title{
+             font-size: 70px;
+             padding: 60px;
+          
+         } 
+         #demo1{
+             margin-top: 30px;
+             margin-left: 40px;
+             height: 450px;
+             width: 400px;
+             background-color: cyan;
+         }
+    
+        </style>
+
+    </head>
+    
+    <body>
+
+        <h3>Basic card</h3>
+        <pre>  &lt;div  class="mdc-card"&gt;
+            &lt;div class="mdc-card__primary-action" tabindex="0"&gt;
+              &lt;!-- content within actionable area --&gt;
+              &lt;h2&gt;Basic card&lt;/h2&gt;
+            &lt;/div&gt;
+            &lt;h3&gt;.mdc-card &lt;br&gt;.mdc-card__primary-action&lt;/h3&gt;
+          &lt;/div&gt;</pre>
+        <div id="first" class="mdc-card">
+            <div class="mdc-card__primary-action" tabindex="0">
+              <!-- content within actionable area -->
+              <h2>Basic card</h2>
+            </div>
+            <h3>.mdc-card <br>.mdc-card__primary-action</h3>
+          </div>
+
+          <br><br><br>
+          <h3>Outlined cards</h3>
+          <xmp><div id="first" class="mdc-card mdc-card--outlined">
+            <div class="mdc-card__primary-action" tabindex="0">
+              <!-- content within actionable area -->
+              <h2>Outlined card</h2>
+            </div>
+            <h3>.mdc-card mdc-card--outlined <br>.mdc-card__primary-action</h3>
+          </div>
+</xmp>
+          <div id="first" class="mdc-card mdc-card--outlined">
+            <div class="mdc-card__primary-action" tabindex="0">
+              <!-- content within actionable area -->
+              <h2>Outlined card</h2>
+            </div>
+            <h3>.mdc-card mdc-card--outlined <br>.mdc-card__primary-action</h3>
+          </div>
+
+    
+
+          
+          
+          <br><br> <br><br>
+
+          <h3>Actions </h3>
+         <XMP> <div class="mdc-card__actions">
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 1</span>
+            </button>
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 2</span>
+            </button>
+          </div></XMP>
+          <div class="mdc-card__actions">
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 1</span>
+            </button>
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 2</span>
+            </button>
+          </div>
+
+          <br><br> <br><br> <br><br>
+
+          <h3>Iconic buttons in cards</h3>
+          <xmp>
+            <div  class="mdc-card__actions">
+              <button class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+                 aria-pressed="false"
+                 aria-label="Add to favorites"
+                 title="Add to favorites">
+               <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+               <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+              </button>
+              <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+              <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+            </div>
+  </xmp>
+          <div  class="mdc-card__actions">
+            <button  class="mdc-icon-button mdc-card__action mdc-card__action--icon"
+               aria-pressed="false"
+               aria-label="Add to favorites"
+               title="Add to favorites">
+             <i id="iconbutton" class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+             <i id="iconbutton" class="material-icons mdc-icon-button__icon">favorite_border</i>
+            </button>
+            <button id="iconbutton" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+            <button id="iconbutton" class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+          </div>
+
+
+            <br><br> <br><br> <br><br>
+            <h3>To have a single action button take up the entire width of the action row, use the --full-bleed modifier on the row:</h3>
+          <xmp>          <div class="mdc-card__actions mdc-card__actions--full-bleed">
+            <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
+              <span class="mdc-button__label">All Business Headlines</span>
+              <i class="material-icons" aria-hidden="true">arrow_forward</i>
+            </a>
+          </div>
+</xmp>
+            <div class="mdc-card__actions mdc-card__actions--full-bleed">
+            <a class="mdc-button mdc-card__action mdc-card__action--button" href="#">
+              <span class="mdc-button__label">All Business Headlines</span>
+              <i class="material-icons" aria-hidden="true">arrow_forward</i>
+            </a>
+          </div>
+<br><br>
+
+          <h3>To display buttons and icons in the same row, wrap them in mdc-card__action-buttons and mdc-card__action-icons elements:</h3>
+          <xmp> <div class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+              <button class="mdc-button mdc-card__action mdc-card__action--button">
+                <span class="mdc-button__label">Read</span>
+              </button>
+              <button class="mdc-button mdc-card__action mdc-card__action--button">
+                <span class="mdc-button__label">Bookmark</span>
+              </button>
+            </div>
+            <div class="mdc-card__action-icons">
+             <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+              <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+            </div>
+          </div></xmp>
+          <div class="mdc-card__actions">
+            <div class="mdc-card__action-buttons">
+              <button class="mdc-button mdc-card__action mdc-card__action--button">
+                <span class="mdc-button__label">Read</span>
+              </button>
+              <button class="mdc-button mdc-card__action mdc-card__action--button">
+                <span class="mdc-button__label">Bookmark</span>
+              </button>
+            </div>
+            <div class="mdc-card__action-icons">
+             <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+              <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+            </div>
+          </div>
+<BR><br><br>
+
+
+    <h3>Combined Example</h3>
+    <xmp>      <div class="mdc-card" id="all">
+        <div class="mdc-card__primary-action">
+          <div class="mdc-card__media mdc-card__media--square">
+            <div id="title" class="mdc-card__media-content">Title</div>
+          </div>
+          <!-- ... additional primary action content ... -->
+        </div>
+        <div class="mdc-card__actions">
+          <div class="mdc-card__action-buttons">
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 1</span>
+            </button>
+            <button class="mdc-button mdc-card__action mdc-card__action--button">
+              <span class="mdc-button__label">Action 2</span>
+            </button>
+          </div>
+          <div class="mdc-card__action-icons">
+            <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+            <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+          </div>
+        </div>
+      </div>
+</xmp>
+          <div class="mdc-card" id="all">
+            <div class="mdc-card__primary-action">
+              <div class="mdc-card__media mdc-card__media--square">
+                <div id="title" class="mdc-card__media-content">Title</div>
+              </div>
+              <!-- ... additional primary action content ... -->
+            </div>
+            <div class="mdc-card__actions">
+              <div class="mdc-card__action-buttons">
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                  <span class="mdc-button__label">Action 1</span>
+                </button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">
+                  <span class="mdc-button__label">Action 2</span>
+                </button>
+              </div>
+              <div class="mdc-card__action-icons">
+                <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="Share">share</button>
+                <button class="material-icons mdc-icon-button mdc-card__action mdc-card__action--icon" title="More options">more_vert</button>
+              </div>
+            </div>
+          </div>
+
+<br><br><br>
+
+          <h3>Sample card1</h3>
+          <xmp>  <div id="demo1" class="mdc-card demo-card">
+            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+              <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div>
+              <div class="demo-card__primary">
+                <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+              </div>
+              <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+            </div>
+            <div class="mdc-card__actions">
+              <div class="mdc-card__action-buttons">
+                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Read</button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Bookmark</button>
+              </div>
+              <div class="mdc-card__action-icons">
+                <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites">
+                  <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                  <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                </button>
+                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">share</button>
+                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">more_vert</button>
+              </div>
+            </div>
+          </div></xmp>
+          <div id="demo1" class="mdc-card demo-card">
+            <div class="mdc-card__primary-action demo-card__primary-action" tabindex="0">
+              <div class="mdc-card__media mdc-card__media--16-9 demo-card__media" style="background-image: url(&quot;https://material-components.github.io/material-components-web-catalog/static/media/photos/3x2/2.jpg&quot;);"></div>
+              <div class="demo-card__primary">
+                <h2 class="demo-card__title mdc-typography mdc-typography--headline6">Our Changing Planet</h2>
+                <h3 class="demo-card__subtitle mdc-typography mdc-typography--subtitle2">by Kurt Wagner</h3>
+              </div>
+              <div class="demo-card__secondary mdc-typography mdc-typography--body2">Visit ten places on our planet that are undergoing the biggest changes today.</div>
+            </div>
+            <div class="mdc-card__actions">
+              <div class="mdc-card__action-buttons">
+                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Read</button>
+                <button class="mdc-button mdc-card__action mdc-card__action--button">  <span class="mdc-button__ripple"></span> Bookmark</button>
+              </div>
+              <div class="mdc-card__action-icons">
+                <button class="mdc-icon-button mdc-card__action mdc-card__action--icon--unbounded" aria-pressed="false" aria-label="Add to favorites" title="Add to favorites">
+                  <i class="material-icons mdc-icon-button__icon mdc-icon-button__icon--on">favorite</i>
+                  <i class="material-icons mdc-icon-button__icon">favorite_border</i>
+                </button>
+                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="Share" data-mdc-ripple-is-unbounded="true">share</button>
+                <button class="mdc-icon-button material-icons mdc-card__action mdc-card__action--icon--unbounded" title="More options" data-mdc-ripple-is-unbounded="true">more_vert</button>
+              </div>
+            </div>
+          </div>
+
+
+
+          <br><br>
+          <h2 id="style-customization">Style Customization</h2>
+          <h3 id="css-classes">CSS Classes</h3>
+          <table border="10px" style="border: darkblue 2px solid;">
+            <thead>
+              <tr>
+                <th>CSS Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><code>mdc-card</code></td>
+                <td>Mandatory. The main card element.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card--outlined</code></td>
+                <td>Optional. Removes the shadow and displays a hairline outline instead.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__primary-action</code></td>
+                <td>Optional. The main tappable area of the card. Typically contains most (or all) card content <em>except</em> <code>mdc-card__actions</code>. Only applicable to cards that have a primary action that the main surface should trigger.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__media</code></td>
+                <td>Optional. Media area that displays a custom <code>background-image</code> with <code>background-size: cover</code>.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__media--square</code></td>
+                <td>Optional. Automatically scales the media area’s height to equal its width.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__media--16-9</code></td>
+                <td>Optional. Automatically scales the media area’s height according to its width, maintaining a 16:9 aspect ratio.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__media-content</code></td>
+                <td>Optional. An absolutely-positioned box the same size as the media area, for displaying a title or icon on top of the <code>background-image</code>.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__actions</code></td>
+                <td>Optional. Row containing action buttons and/or icons.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__actions--full-bleed</code></td>
+                <td>Optional. Removes the action area’s padding and causes its only child (an <code>mdc-card__action</code> element) to consume 100% of the action area’s width.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__action-buttons</code></td>
+                <td>Optional. A group of action buttons, displayed on the left side of the card (in LTR), adjacent to <code>mdc-card__action-icons</code>.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__action-icons</code></td>
+                <td>Optional. A group of supplemental action icons, displayed on the right side of the card (in LTR), adjacent to <code>__action-buttons</code>.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__action</code></td>
+                <td>Optional. An individual action button or icon.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__action--button</code></td>
+                <td>Optional. An action button with text.</td>
+              </tr>
+              <tr>
+                <td><code>mdc-card__action--icon</code></td>
+                <td>Optional. An action icon with no text. We recommend using <a href="https://material.io/tools/icons/">Material Icons</a> from Google Fonts.</td>
+              </tr>
+            </tbody>
+          </table>
+    </body>
+
+
+
+
+</html>

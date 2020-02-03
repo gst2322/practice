@@ -1,0 +1,63 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <button type="button" onclick="abc()">Click</button>
+<button type="button" onclick="mno()">Editable</button>
+<table id="table">
+  
+  
+  
+</table>
+        <script>
+      function abc(){
+  var server=new XMLHttpRequest()
+  server.open("GET","https://api.myjson.com/bins/lnoem",true)
+  server.send()
+  server.onreadystatechange=function(status){
+      if(server.readyState==4 && server.status==200){
+         var data=server.response
+         var jsondata=JSON.parse(data)
+         var len=jsondata.length
+         var {name,id,address,mobile}=jsondata;
+         var table=document.getElementById("table");
+        for(i=0;i<len;i++){
+          var row=document.createElement("tr")
+
+          var td1=document.createElement("td")
+          row.append(td1)
+          td1.innerHTML=jsondata[i].name
+          
+          var td2=document.createElement("td")
+          row.append(td2)
+          td2.innerHTML=jsondata[i].id
+          
+          var td3=document.createElement("td")
+          row.append(td3)
+          td3.innerHTML=jsondata[i].address
+          
+          var td4=document.createElement("td")
+          row.append(td4)
+          td4.innerHTML=jsondata[i].mobile
+          
+          table.append(row)
+          
+         
+
+         }
+         
+      }
+  }
+
+
+}
+function mno(){
+            // document.querySelectorAll("#table")[0].setAttribute("contentEditable",true)
+            alert("hiii")
+            
+          }
+        </script>
+    </body>
+</html>

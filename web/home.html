@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <style>
+        nav{
+            height: 50px;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(247, 16, 16), rgb(3, 21, 182));
+            color: mintcream;
+        }
+        li{
+            display: inline;
+            padding: 20px ;
+            font-size: 20px;
+            text-decoration: none;
+            
+        }
+        ul{
+            padding-top: 10px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        footer{
+            bottom: 0px;
+            background-color: mediumblue;
+            position: fixed;
+            width: 100%;
+            color: white;
+            text-align: center;
+
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        a:hover{
+            background-color: green;
+        }
+        a:visited{
+            color: mintcream;
+        }
+        body{
+            background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+        }
+
+        iframe{
+            margin-left: 350px;
+        }
+       
+        
+        
+        
+        </style>
+
+
+    </head>
+    <body>
+        <nav>
+            <ul id="ul">
+                <li style="background-color:purple;"><a href="#" >Home</a></li> >
+                <li ><a href="about.html" >AboutUs</a></li> >
+                <li><a href="contact.html" >Contact Us</a></li>
+            </ul>
+
+        </nav>
+        <h1>This is Home Page</h1>
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/cQpe2HMkqVA?start=17" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+        <footer>copyrights@ Govoor Saiteja Rentastico</footer>
+
+        <script>
+           var ulid=document.querySelectorAll("#ul li")  
+            var ul=document.getElementById("ul")
+            var len=ulid.length
+            ul.innerHTML="";
+            for(var i=0;i<len;i++){
+            
+                ulid[i].addEventListener("mouseover",function(e){
+                    alert(e.target.innerText)
+                })
+                if(i != len -1){
+                    var p=document.createElement("p")
+                var pp = p.innerHTML=">"
+                ulid[i].append(pp)
+                
+                }
+                ul.append( ulid[i])
+             
+            }
+
+        </script>
+    </body>
+
+</html>

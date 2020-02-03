@@ -1,0 +1,164 @@
+<html>
+    <head>
+        <script>
+
+        function showonly1(){
+            for(i=2;i<11;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=1;i<3;i++){
+                document.getElementById("table").rows[i].style.display='block'
+            }
+           
+        }
+        function showonly3(){
+            
+            for(i=3;i<11;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=1;i<3;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=3;i<5;i++){
+                document.getElementById("table").rows[i].style.display='block'
+            }
+           
+        }
+        function showonly5(){
+            
+            for(i=1;i<5;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=5;i<7;i++){
+                document.getElementById("table").rows[i].style.display='block'
+            }
+            for(i=7;i<11;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            
+        }
+        function showonly7(){
+            
+            for(i=1;i<7;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=7;i<9;i++){
+                document.getElementById("table").rows[i].style.display='block'
+            }
+            for(i=9;i<11;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+        }
+        function showonly9(){
+            
+            for(i=1;i<9;i++){
+                document.getElementById("table").rows[i].style.display='none'
+            }
+            for(i=9;i<11;i++){
+                document.getElementById("table").rows[i].style.display='block'
+            }
+            
+        }
+
+
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+            margin: auto;
+            
+        }
+        table tr{
+            display: none;
+        } 
+        #thid{
+            display: block;
+        }
+        table tr td{
+            width: 150px;
+        }
+        </style>
+
+
+    </head>
+   
+ <body>
+   
+ <table id="table" border="1px">
+     <tr id="thid" >
+         <td >id</td>
+         <td >Name</td>
+         <td >Age</td>
+         <td >Mobile Number</td>
+     </tr>
+     <tr>
+        <td >1</td>
+        <td  >One </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >2</td>
+        <td  >Two </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >3</td>
+        <td  >Three </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >4</td>
+        <td  >Four </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >5</td>
+        <td  >Five </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >6</td>
+        <td  >Six </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >7</td>
+        <td  >Seven </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >8</td>
+        <td  >Eight </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >9</td>
+        <td  >Nine </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+    <tr>
+        <td >10</td>
+        <td  >Ten </td>
+        <td >23</td>
+        <td >9573017295</td>
+    </tr>
+   <button type="button" onclick="showonly1()" >12</button>
+   <button type="button" onclick="showonly3()">34</button>
+   <button type="button" onclick="showonly5()">56</button>
+   <button type="button" onclick="showonly7()" >78</button>
+   <button type="button" onclick="showonly9()" >910</button>
+    
+ </table>
+ </body>   
+</html>

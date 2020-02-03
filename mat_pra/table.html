@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
+
+        <style>
+         body{
+            background-image: linear-gradient(120deg, #f6d365 0%, #fda085 100%);
+         }   
+
+        .mdc-data-table{
+            width: 500px;
+            margin-top: 5%;
+            margin-left: 30%;
+            border: 5px;
+            
+        }
+        /* #mobile{
+            position: relative
+            margin-right:20px ;
+    
+        } */
+        .mdc-data-table__header-cell{
+            /* padding: 10px; */
+            background-color:chocolate;
+            font-size: 20px;
+            color: white;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .mdc-data-table__cell{
+            padding-right: 10px;
+            font-size: 20px;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+        .mdc-button{
+            opacity: 0.8;
+        }
+        .mdc-button:hover{
+            opacity: 2;
+            color: black ;
+        }  
+        h1{
+            text-align: center;
+            height: 50px;
+            margin-top: 0;
+            margin-bottom: 0;
+            padding-top: 5px;
+            background-color:darkblue ;
+            color: white;
+            font-size: 32px;
+        } 
+        
+        </style>
+    </head>
+    <body>
+
+        <div class="mdc-data-table" >
+            <h1>Customer Details  </h1>
+            
+            <table class="mdc-data-table__table" aria-label="Dessert calories">
+              <thead>
+                <tr class="mdc-data-table__header-row">
+                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Name</th>
+                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" role="columnheader" scope="col">Age</th>
+                  <th class="mdc-data-table__header-cell mdc-data-table__header-cell--numeric" id="mobile" role="columnheader" scope="col">Mobile</th>
+                  <th class="mdc-data-table__header-cell" role="columnheader" scope="col">Action</th>
+                </tr>
+              </thead>
+              <tbody class="mdc-data-table__content">
+                <tr class="mdc-data-table__row">
+                  <td class="mdc-data-table__cell">Saiteja</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">23</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">9573017295</td>
+                  <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                </tr>
+                <tr class="mdc-data-table__row">
+                  <td class="mdc-data-table__cell">User1</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">26</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">9934896936</td>
+                  <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                </tr>
+                <tr class="mdc-data-table__row">
+                  <td class="mdc-data-table__cell">User2</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">18</td>
+                  <td class="mdc-data-table__cell mdc-data-table__cell--numeric">9573758353</td>
+                  <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                </tr>
+                <tr class="mdc-data-table__row">
+                    <td class="mdc-data-table__cell">User3</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">42</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">8883939334</td>
+                    <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                  </tr>
+                  <tr class="mdc-data-table__row">
+                    <td class="mdc-data-table__cell">User4</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">32</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">9573758353</td>
+                    <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                  </tr>
+                  <tr class="mdc-data-table__row">
+                    <td class="mdc-data-table__cell">User5</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">29</td>
+                    <td class="mdc-data-table__cell mdc-data-table__cell--numeric">9573758353</td>
+                    <td class="mdc-data-table__cell"><button class="mdc-button mdc-button--raised">  <span class="mdc-button__ripple"></span> Click</button></td>
+                  </tr>
+              </tbody>
+            </table>
+          </div>
+
+
+    </body>    
+</html>   

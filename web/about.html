@@ -1,0 +1,141 @@
+<html>
+    <head>
+        <link href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css" rel="stylesheet">
+        <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script>
+      
+        <style>
+        nav{
+            height: 50px;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(247, 16, 16), rgb(3, 21, 182));
+        }
+        li{
+            display: inline;
+            padding: 20px ;
+            font-size: 20px;
+            text-decoration: none;
+            color: mintcream;
+        }
+        ul{
+            padding-top: 10px;
+            font-weight: normal;
+            text-decoration: none;
+            
+        }
+        footer{
+            bottom: 0px;
+            background-color: mediumblue;
+            position: fixed;
+            width: 100%;
+            color: white;
+            text-align: center;
+
+        }
+        #head1{
+            font-size: 100px;
+            height: auto;
+            display: inline-block;
+            /* width: 500px; */
+            background-color: red;
+            position: relative;
+            animation-name: example;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+        }
+        .reverse {
+            transform: rotateY(180deg);
+            direction: rtl;
+        }
+        @keyframes example {
+            0%   {background-color:red; left:0px; top:0px;}
+            25%  {background-color:yellow; left:200px; top:0px;}
+            50%  {background-color:blue; left:200px; top:200px;}
+            75%  {background-color:green; left:0px; top:200px;}
+            100% {background-color:red; left:0px; top:0px;}
+        }
+        a{
+            text-decoration: none;
+            
+        }
+        a:hover{
+            background-color: green;
+        }
+        a:visited{
+            color: mintcream;
+        }
+        body{
+            /* background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%); */
+            background-image: linear-gradient(-45deg, #FFC796 0%, #FF6B95 100%);
+        }
+       
+       button{
+           margin-top: -20px;
+       }
+      
+        
+        
+        
+        </style>
+      
+
+
+    </head>
+    <body>
+        <nav>
+            <ul id="ul">
+                <li><a href="home.html" >Home</a></li>  
+                <li style="background-color: purple;"><a  >AboutUs</a></li> 
+                <li><a href="contact.html" >Contact Us</a></li>
+                
+            </ul>
+
+        </nav>
+
+        <button class="mdc-button" type="button" onclick="r()">click here to reverse</button>
+        
+        <h1 id="head1">RENTASTICO</h1>
+
+
+        <footer>copyrights@ Govoor Saiteja Rentastico</footer>
+
+
+
+
+        <script>
+            var ulid=document.querySelectorAll("#ul li")  
+            var ul=document.getElementById("ul")
+            var len=ulid.length
+            ul.innerHTML="";
+            for(var i=0;i<len;i++){
+              
+                ulid[i].addEventListener("click",function(e){
+                    alert(e.target.innerText)
+                })
+                if(i != len -1){
+                    var p=document.createElement("p")
+                var pp = p.innerHTML=">"
+                ulid[i].append(pp)
+                
+                }
+                ul.append( ulid[i])
+             
+            }
+
+
+
+    
+            function r() {
+                console.log("clicked!");
+                var str=document.getElementById("head1").innerText;
+                var splitString = str.split("")
+                var reverseArray =splitString.reverse()
+                var joinArray = reverseArray.join("")
+      
+                head1.innerHTML=joinArray
+            }
+    
+            </script>
+
+
+    </body>
+</html>

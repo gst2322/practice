@@ -1,0 +1,121 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/3.7.2/animate.min.css">
+        <style>
+            #fnameerror{
+                color: red;
+
+            }
+            #popdiv{
+                display: none;
+                background-color: aqua;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 25%;
+                
+                width: 350px;
+                position: fixed;
+                z-index: 100;
+                opacity: 1;
+                
+
+            }
+            body{
+                /* background-color: red; */
+            }
+            #overlay{
+                display: none;
+                z-index: 99;
+                background-color: rgba(0,0,0,0.5);
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+        <script>
+            // function xyz(){
+            //     var fname=document.getElementById("fname")
+            //     var fnameerror=document.getElementById("fnameerror")
+            //     if(fname.value==""){
+            //         // fnameerror.style.display="block";
+            //         fnameerror.innerHTML="You must enter Name";
+            //     }else{
+            //         // fnameerror.style.display="none";
+            //     }
+                
+            // }
+            
+            function xyz(){
+                var popdiv=document.getElementById("popdiv")
+                popdiv.style.display="block";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="block"
+                // popdiv.style.zIndex="1";
+                // document.getElementById.style.backgroundColor="black";
+                // document.body.style.opacity="0.5";
+                // document.body.style.zIndex="2";
+               
+              }
+            function abc(){
+                popdiv.style.display="none";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="none";
+            }  
+            function userdata(){
+                var name=document.getElementById("name");
+                var mobile=document.getElementById("mobile");
+                var city=document.getElementById("city");
+                var fcolor=document.getElementById("fcolor").value;
+                var bdate=document.getElementById("bdate");
+                var fullform=document.getElementById("fullform");
+                var popdiv=document.getElementById("popdiv");
+
+                fullform.innerHTML=" Hi &nbsp;"+name.value+"<br>Thank You For entering Your details,"+"Your details<br>Name:"+name.value+"<br>Mobile:"+mobile.value+"<br>City:"+city.value+"<br>Fav Color"+fcolor+"<br>Date of Birth:"+bdate.value;
+                popdiv.style.backgroundColor=fcolor;
+
+
+            }
+
+        </script>
+        
+        <title>Form Practice</title>
+    </head>
+    <body>
+        <marquee direction="right">hellooo</marquee>
+
+            <button type="button" onclick="xyz()" value="">Open Registraion form</button>
+
+
+
+        
+        <div id="popdiv">
+            <button type="button" onclick="abc()">Close</button><br>
+            <form id="fullform" >
+                
+                Name:<input type="text" id="name" required><br>
+                Mobile:<input type="number" id="mobile"><br>
+                City Name:<input type="text" id="city"><br>
+                Fav Color:<input type="color" id="fcolor"><br>
+                Date Of Birth:<input type="date" id="bdate"><br>
+
+                <button onclick="userdata()">Submit Your Details</button>
+              
+            </form>
+            
+       </div>
+       
+        <div id="overlay">
+
+
+        </div>
+        <!-- <marquee>
+            Sai
+        </marquee> -->
+    </body>
+</html>

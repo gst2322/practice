@@ -1,0 +1,56 @@
+<html>
+<head>
+
+    <style>
+        #one{
+            float: left;
+            margin-left: 300px;
+            position: relative;
+            
+        }
+        #two{
+            float: right;
+            margin-right: 400px;
+            position: relative;
+        }
+        button{
+            margin-top: 180px;
+            margin-left: 180px;
+        }
+    </style>
+
+    <script>
+        var a=true;
+        
+    function xyz(){
+        var one=document.getElementById("one");
+        var two=document.getElementById("two");
+
+        var oneimg=one.innerHTML;
+        var twoimg=two.innerHTML;
+
+        one.innerHTML=twoimg;
+        two.innerHTML=oneimg;
+        
+       
+
+    }
+    </script>
+
+
+</head>
+<body>
+
+    <div id="one" > 
+        <img  src="one.jpg">
+    </div>
+
+    <div id="two" >
+        <img  src="two.jpg">
+    </div>
+
+    <button type="button" onclick="xyz()"> swap</button>
+
+</body>
+
+</html>

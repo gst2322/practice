@@ -1,0 +1,39 @@
+<html>
+    <head>
+
+
+    </head>
+    <body>
+        <table border="1">
+            <tr>
+                <td>1</td>
+                <td>saiteja</td>
+                <td>dev</td>
+            </tr>
+        </table>
+        <button type="button" onclick="appendrow()">click</button>
+
+
+        <script>
+            var c=1;
+            function appendrow(){
+                var alltable=document.getElementsByTagName("table")
+                var row=alltable[0].rows[0]
+                console.log(alltable[0])
+                c++
+                
+                var newrow=document.createElement("tr")
+
+                newrow.innerHTML=row.innerHTML
+                // console.log(newrow.children[0])
+                newrow.cells[0].innerHTML=c
+
+                
+                alltable[0].append(newrow)  
+            }
+      
+
+        
+        </script>
+    </body>
+</html>

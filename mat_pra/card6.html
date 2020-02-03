@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <link
+        href="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.css"
+        rel="stylesheet"
+      />
+      
+      <!-- <script src="https://unpkg.com/material-components-web@latest/dist/material-components-web.min.js"></script> -->
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/icon?family=Material+Icons"
+      />
+        <style>
+        .mdl-grid {
+	max-width: 600px;
+}
+.mdl-card__media {
+	margin: 0;
+}
+.mdl-card__media > img {
+	max-width: 100%;
+}
+.mdl-card__actions {
+	display: flex;
+	box-sizing:border-box;
+	align-items: center;
+}
+.mdl-card__actions > .mdl-button--icon {
+	margin-right: 3px;
+	margin-left: 3px;
+}
+        
+        </style>
+
+
+    </head>
+    <body>
+      <!--
+https://webdesign.tutsplus.com/tutorials/learning-material-design-lite-cards--cms-24633
+https://github.com/google/material-design-lite/tree/mdl-1.x/src/card
+-->
+<!-- 
+Additional
+https://github.com/marlenesco/material-cards
+https://codepen.io/marlenesco/pen/NqOozj
+-->
+<div class="mdl-layout mdl-js-layout mdl-color--grey-100">
+    <main class="mdl-layout__content">
+      <div class="mdl-grid">
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="https://tfirdaus.github.io/mdl/images/laptop.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__title">
+            <h1 class="mdl-card__title-text">Learning Web Design</h1>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+            <div class="mdl-layout-spacer"></div>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+          </div>
+        </div>
+  
+  
+  
+        <div class="mdl-card mdl-cell mdl-cell--6-col mdl-cell--4-col-tablet mdl-shadow--2dp">
+          <figure class="mdl-card__media">
+            <img src="https://tfirdaus.github.io/mdl/images/html5.jpg" alt="" />
+          </figure>
+          <div class="mdl-card__title">
+            <h1 class="mdl-card__title-text">Learning HTML</h1>
+          </div>
+          <div class="mdl-card__supporting-text">
+            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam accusamus, consectetur.</p>
+          </div>
+          <div class="mdl-card__actions mdl-card--border">
+            <a class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">Read More</a>
+            <div class="mdl-layout-spacer"></div>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">favorite</i></button>
+            <button class="mdl-button mdl-button--icon mdl-button--colored"><i class="material-icons">share</i></button>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+    </body>
+
+
+</html>

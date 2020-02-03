@@ -1,0 +1,149 @@
+<html>
+    <head>
+        <script>
+            var clickedrow;
+         function openpopup(rowNumber){
+         
+          
+            var popdiv=document.getElementById("popdiv")
+                popdiv.style.display="block";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="block"
+
+            var allrows=document.querySelectorAll("#table tr")
+
+             clickedrow=allrows[rowNumber]
+
+            var name=clickedrow.cells[1].innerHTML
+            var age=clickedrow.cells[2].innerHTML
+            var mobile=clickedrow.cells[3].innerHTML
+
+            var formname=document.getElementById("ipname")
+            formname.value=name;
+            var formage=document.getElementById("ipage")
+            formage.value=age;
+            var formmobile=document.getElementById("ipmobile")
+            formmobile.value=mobile   
+
+         }
+         function closepopup(){
+                popdiv.style.display="none";
+                var overlay=document.getElementById("overlay");
+                overlay.style.display="none";
+            }  
+          function savedata(){
+            // var popdiv=document.getElementById("popdiv")
+            //     popdiv.style.display="block";
+            //     var overlay=document.getElementById("overlay");
+            //     overlay.style.display="block"
+
+               var ipname=document.getElementById("ipname")
+               var ipage=document.getElementById("ipage")
+               var ipmobile=document.getElementById("ipmobile")
+
+               clickedrow.cells[1].innerHTML=ipname.value;
+               clickedrow.cells[2].innerHTML=ipage.value;
+               clickedrow.cells[3].innerHTML=ipmobile.value;
+              
+
+          } 
+        
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+            margin: auto;
+        }
+        #popdiv{
+                display: none;
+                background-color: aqua;
+                left: 0;
+                right: 0;
+                margin: auto;
+                top: 25%;
+                
+                width: 350px;
+                position: fixed;
+                z-index: 100;
+                opacity: 1;
+                
+
+            }
+            body{
+                /* background-color: red; */
+            }
+            #overlay{
+                display: none;
+                z-index: 99;
+                background-color: rgba(0,0,0,0.5);
+                position: fixed;
+                height: 100%;
+                width: 100%;
+                overflow: hidden;
+                top: 0;
+                left: 0;
+                bottom: 0;
+                right: 0;
+            }
+        </style>
+
+
+    </head>
+   
+ <body>
+ <table id="table" border="1px">
+     <tr>
+         <td >id</td>
+         <td >Name</td>
+         <td >Age</td>
+         <td >Mobile Number</td>
+         <td>Action</td>
+     </tr>
+     <tr id="trone">
+        <td >1</td>
+        <td  >Sai </td>
+        <td >23</td>
+        <td >9573017295</td>
+        <td> <button onclick="openpopup(1)">Click</button> </td>
+    </tr>
+    <tr id="trone">
+        <td >2</td>
+        <td  >Sai </td>
+        <td  >23</td>
+        <td  >9573017295</td>
+        <td> <button onclick="openpopup(2)">Click</button> </td>
+    </tr>
+    <tr id="trone">
+        <td >3</td>
+        <td  >Sai </td>
+        <td  >23</td>
+        <td  >9573017295</td>
+        <td> <button onclick="openpopup(3)">Click</button> </td>
+    </tr>
+    
+ </table>
+ <div id="overlay">
+
+</div>
+ <div id="popdiv">
+    <button type="button" onclick="closepopup()">Close</button><br>
+    <form id="fullform" >
+        
+        Name:<input type="text" id="ipname" required><br>
+        Age:<input type="number" id="ipage"><br>
+        mobile:<input type="text" id="ipmobile"><br>
+
+        <button type="button" onclick="savedata()">Save Your Details</button>
+      
+    </form>
+    
+</div>
+
+
+
+
+
+ </body>   
+</html>

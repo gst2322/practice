@@ -1,0 +1,73 @@
+<html>
+    <head>
+        <script>
+               var tf=true;
+        function editsave(rownum){
+         
+            var x=document.getElementById("table").rows[rownum].cells
+            
+            if(tf==true){
+                x[0].setAttribute("contentEditable",true)
+                x[1].setAttribute("contentEditable",true)
+                x[2].setAttribute("contentEditable",true)
+                x[3].setAttribute("contentEditable",true)
+                
+                document.getElementById("btn1").innerHTML="Click Here to Save";
+                document.getElementById("btn1").style.backgroundColor='green';
+
+                tf=false;
+            }else{
+                x[0].setAttribute("contentEditable",false)
+                x[1].setAttribute("contentEditable",false)
+                x[2].setAttribute("contentEditable",false)
+                x[3].setAttribute("contentEditable",false)
+                
+                document.getElementById("btn1").innerHTML="Click here to Edit"
+                document.getElementById("btn1").style.backgroundColor='yellow';
+                tf=true;
+               
+            }
+           
+        }
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+            margin: auto;
+        }
+        h2{
+            margin: auto;
+            text-align: center;
+        }
+        
+        </style>
+
+
+    </head>
+   
+ <body>
+     <h2>Hello,If You want to edit table..then click on edit.
+         <br>After edit , click on Save to Save Your Details.
+     </h2>
+ <table id="table" border="1px">
+     <tr >
+         <td >id</td>
+         <td >Name</td>
+         <td >Age</td>
+         <td >Mobile Number</td>
+         <td>Action</td>
+     </tr>
+     <tr>
+        <td >1</td>
+        <td  >Sai </td>
+        <td >23</td>
+        <td >9573017295</td>
+        <td> <button type="button" id="btn1"  onclick="editsave(1)">Click here to Edit</button> </td>
+    </tr>
+   
+    
+ </table>
+ </body>   
+</html>

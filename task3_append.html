@@ -1,0 +1,74 @@
+<html>
+    <head>   
+      <style>
+      ul{
+        list-style: square;
+      }
+      </style>   
+    </head>
+ <body>
+     
+    
+<ul id="myList">
+  <li id="first">Srinivas</li>
+    
+</ul>
+  
+  
+  <button onclick="xyz()">Try</button>
+  <button ondblclick="removetwo()" onclick="remove()">Remove</button>
+  
+  <script>
+    var con=1;
+    var c=0;
+    function xyz() {
+
+        var myList=document.getElementById("myList")
+        var first=document.getElementById("first").innerText;
+        // var f1=first.innerText
+        
+
+      var list=document.createElement("li");
+
+
+      
+      c++
+
+      var marquee=document.createElement("marquee")
+      marquee.innerHTML=first+"mother "+c
+      list.append(marquee)
+      myList.append(list)
+      
+
+
+
+      }
+     
+      function remove(){
+        var all=document.getElementsByTagName("li")
+        if(con==1){
+          all[all.length-1].remove();
+          con=2;
+          // return;
+        }
+        if(con==2){
+          var allli=document.querySelectorAll("li")
+          for(var i=0;i<allli.length;i++){
+          if( i % 2 !=0 ){
+            allli[i].remove();
+          }
+        }
+
+}
+        
+        
+      }
+
+
+      function removetwo(){
+
+      }
+    </script>
+
+ </body>   
+</html>

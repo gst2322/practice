@@ -1,0 +1,237 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+      
+    
+        <style>
+        nav{
+            height: 50px;
+            width: 100%;
+            background-image: linear-gradient(to right, rgb(247, 16, 16), rgb(3, 21, 182));
+        }
+        li{
+            display: inline;
+            padding: 20px ;
+            font-size: 20px;
+            text-decoration: none;
+            color: mintcream;
+        }
+        ul{
+            padding-top: 10px;
+            font-weight: normal;
+            text-decoration: none;
+        }
+        footer{
+            bottom: 0px;
+            background-color: mediumblue;
+            position: fixed;
+            width: 100%;
+            color: white;
+            text-align: center;
+
+        }
+        a{
+            text-decoration: none;
+        }
+        a:hover{
+            background-color: green;
+        }
+        a:visited{
+            color: mintcream;
+        }
+        body{
+            background-image: linear-gradient(to top, #37ecba 0%, #72afd3 100%);
+        }
+       
+       
+        
+        table tr{
+            display: none;
+        } 
+        #thid{
+            display: block;
+        }
+        table tr td{
+            width: 150px;
+        }
+        /* tr:hover
+         {background-color: #f5f5f5;} */
+        table{
+            width: 100%;
+        }
+       
+        
+        
+        </style>
+
+
+    </head>
+    <body>
+        <nav>
+            <ul id="ul"> 
+                <li><a href="home.html" >Home</a></li> >
+                <li><a href="about.html" >AboutUs</a></li> >
+                <li  style="background-color: purple;"><a href="#" >Contact Us</a></li>
+            </ul>
+
+        </nav>
+        <h1>This is Contact Page</h1>
+        <table class="table table-bordered table-dark" id="table" border="1px">
+            <tr id="thid" >
+                <td >id</td>
+                <td >Name</td>
+                <td >Age</td>
+                <td >Mobile Number</td>
+            </tr>
+            <tr>
+               <td >1</td>
+               <td  >Saiteja </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >2</td>
+               <td  >Aravind </td>
+               <td >22</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >3</td>
+               <td  >Vignesh </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >4</td>
+               <td  >Kruthika </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >5</td>
+               <td  >Sherya </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >6</td>
+               <td  >Sravani </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >7</td>
+               <td  >Aman </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >8</td>
+               <td  >Kim garu</td>
+               <td >40</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >9</td>
+               <td  >Biren garu</td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+           <tr>
+               <td >10</td>
+               <td  >Rajesh garu </td>
+               <td >23</td>
+               <td >9573017295</td>
+           </tr>
+          <button class="btn btn-primary" type="button" onclick="showonly1()" >12</button>
+          <button class="btn btn-primary" type="button" onclick="showonly3()">34</button>
+          <button class="btn btn-primary" type="button" onclick="showonly5()">56</button>
+          <button class="btn btn-primary" type="button" onclick="showonly7()" >78</button>
+          <button class="btn btn-primary" type="button" onclick="showonly9()" >910</button>
+           
+        </table>
+
+        <footer>copyrights@ Govoor Saiteja Rentastico</footer>
+        <script>
+            var ulid=document.querySelectorAll("#ul li")  
+       var ul=document.getElementById("ul")
+       var len=ulid.length
+       ul.innerHTML="";
+       for(var i=0;i<len;i++){
+         
+           ulid[i].addEventListener("click",function(e){
+               alert(e.target.innerText)
+           })
+           if(i != len -1){
+               var p=document.createElement("p")
+           var pp = p.innerHTML=">"
+           ulid[i].append(pp)
+           
+           }
+           ul.append( ulid[i])
+        
+       }
+
+       function showonly1(){
+           for(i=2;i<11;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=1;i<3;i++){
+               document.getElementById("table").rows[i].style.display='block'
+           }
+          
+       }
+       function showonly3(){
+           
+           for(i=3;i<11;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=1;i<3;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=3;i<5;i++){
+               document.getElementById("table").rows[i].style.display='block'
+           }
+          
+       }
+       function showonly5(){
+           
+           for(i=1;i<5;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=5;i<7;i++){
+               document.getElementById("table").rows[i].style.display='block'
+           }
+           for(i=7;i<11;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           
+       }
+       function showonly7(){
+           
+           for(i=1;i<7;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=7;i<9;i++){
+               document.getElementById("table").rows[i].style.display='block'
+           }
+           for(i=9;i<11;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+       }
+       function showonly9(){
+           
+           for(i=1;i<9;i++){
+               document.getElementById("table").rows[i].style.display='none'
+           }
+           for(i=9;i<11;i++){
+               document.getElementById("table").rows[i].style.display='block'
+           }
+           
+       }
+
+
+       </script>
+
+    </body>
+</html>

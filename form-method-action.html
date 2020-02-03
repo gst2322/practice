@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <style>
+            #fnameerror{
+                color: red;
+
+            }
+        </style>
+        <script>
+            function xyz(){
+                var fname=document.getElementById("fname")
+                var fnameerror=document.getElementById("fnameerror")
+                if(fname.value==""){
+                    // fnameerror.style.display="block";
+                    fnameerror.innerHTML="You must enter Name";
+                }else{
+                    // fnameerror.style.display="none";
+                }
+                
+            }
+          
+
+        </script>
+        
+        <title>Form Practice</title>
+    </head>
+    <body>
+        <form>
+            F Name<input type="text" id="fname"><p id="fnameerror"></p>
+            S Name<input type="text" ><br>
+            date<input name="name" type="date" value="#FFFF"><br>
+            time<input name="name" type="time" value="#FFFF"><br>
+            color<input name="name" type="color" value="#FFFF"><br>
+            Select<select>
+                <option value="one">1</option>
+                <option selected value="two">2</option>
+            </select><br>
+            Age<input name="Age" type="number">
+           <br>
+            List<input list="saiteja"><br>
+            <datalist id="saiteja">
+                <option>vignesh</option>
+                <option>aravind</option>
+                <option>sravani</option>
+                <option>kruthika</option>
+                <option>sherya</option>
+            </datalist>
+            school  name<input type="text" value="please enter school name"><br>
+
+
+            <button type="button" onclick="xyz()" value="">Submit</button>
+
+
+          
+        </form>
+       
+
+    </body>
+</html>

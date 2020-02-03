@@ -1,0 +1,92 @@
+<html>
+    <head>
+        <script>
+
+            function reversecells(rownum){
+                var r=document.getElementById("table").rows[rownum].cells
+
+                one=r[0].innerHTML
+                two=r[1].innerHTML
+                three=r[2].innerHTML
+                four=r[3].innerHTML
+
+                r[0].innerHTML=four
+                r[1].innerHTML=three
+                r[2].innerHTML=two
+                r[3].innerHTML=one
+            }
+        //    function setcells(rownum){
+        //     var r=document.getElementById("table").rows[rownum].cells
+
+        //     one=r[0].innerHTML
+        //     two=r[1].innerHTML
+        //     three=r[2].innerHTML
+        //     four=r[3].innerHTML
+
+        //     r[0].innerHTML=one
+        //     r[1].innerHTML=two
+        //     r[2].innerHTML=three
+        //     r[3].innerHTML=four
+        //    }
+           function reverse(){
+               reversecells(0)
+               reversecells(1)
+           }
+
+            
+
+            
+        
+        
+        </script>
+
+        <style>
+        table{
+            border: 1px solid red;
+            font-size: 35px;
+            margin: auto;
+        }
+        #reversecss{
+           background-color: cadetblue;
+           margin-left: 465px;
+           width: 400px;
+           padding-left:20px ;
+        }
+      
+        </style>
+
+
+    </head>
+   
+ <body>
+ <table id="table" border="1px">
+     <tr >
+         <td >id</td>
+         <td >Name</td>
+         <td >Age</td>
+         <td >Mobile Number</td>
+        
+     </tr>
+     <tr>
+        <td >1</td>
+        <td  >Sai </td>
+        <td >23</td>
+        <td >9573017295</td>
+       
+    </tr>
+    
+ </table>
+
+<div id="reversecss">
+<button onclick="reversecells(0)" type="button">Reverse 1st row</button>
+<button onclick="reversecells(1)" type="button">Reverse 2nd row</button>
+<button onclick="reverse()" type="button">Reverse Total Table</button>
+</div>
+<!-- <div id="setcss">
+<button onclick="setcells(0)" type="button">Re Arrange 1st Row</button>
+<button onclick="setcells(1)" type="button">Re Arrange 2nd Row</button>
+<button onclick="setcell()" type="button">Re Arrange Total Table</button>
+</div> -->
+
+ </body>   
+</html>
